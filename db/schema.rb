@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_03_023615) do
+ActiveRecord::Schema.define(version: 2022_12_03_174255) do
 
   create_table "eventlists", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 2022_12_03_023615) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "session_token"
   end
 
   add_foreign_key "eventlists", "users"

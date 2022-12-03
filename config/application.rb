@@ -21,6 +21,8 @@ Bundler.require(*Rails.groups)
 
 module Backend
   class Application < Rails::Application
+    config.autoload_paths << Rails.root.join('lib') #https://www.pluralsight.com/guides/token-based-authentication-with-ruby-on-rails-5-api
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
@@ -36,5 +38,6 @@ module Backend
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    
   end
 end
