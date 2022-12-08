@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :users
   post '/login', to: 'users#login'
   resources :eventlists
-  post '/eventlists/:id', to: 'eventlists#show_with_params'
+  resources :images
 end
