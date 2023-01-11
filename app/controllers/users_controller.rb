@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save 
-      Eventlist.new(user_id: @user.id).save
+      Eventlist.new(user_id: @user.id, eventlist_in_json: '[{"id":1,"editMode":true,"title":"","dateAndTime":"","imageUrl":"","shortDescription":"","longDescription":""}]').save
       render json: {alert: "Account Created :)"}
     else
       render json: {alert: "Username Taken :("}
