@@ -18,5 +18,5 @@ rails s -p 4000
 #### Frontend: #### 
 npm start
 
-# Frontend prerequisites #
+# Backend prerequisites #
 https://guides.rubyonrails.org/v5.1/getting_started.html
